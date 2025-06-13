@@ -24,26 +24,24 @@ nav ul {
 
 }
 
-nav ul li:hover{
-    background-color: aliceblue;
-}
 
-nav ul li a{
+
+nav ul li a {
     height: 100%;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     color: black;
-    padding: 0px 30px;
+    padding: 05px 30px;
     display: flex;
     align-items: center;
 }
 
-nav ul li:first-child{
+nav ul li:first-child {
     margin-right: auto;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
-.sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     right: 0;
@@ -52,17 +50,41 @@ nav ul li:first-child{
     z-index: 999;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
-    border: 2px solid;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
 }
 
-/* .sidebar nav ul{
+.sidebar ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-} */
+
+}
+
+.sidebar ul li a {
+    margin: 15px;
+    width: 100%;
+}
+.menu-btn{
+    display: none;
+}
+
+nav ul li a img{
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 800px) {
+    .hideOnMobile{
+        display:none;
+    }
+    .menu-btn{
+        display: block;
+    }
+}
+@media (max-width: 500px){
+    .sidebar{
+        width: 100%;
+    }
+}
